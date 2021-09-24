@@ -1,6 +1,6 @@
-package fr.lille.univ;
+package fr.lille.univ.core;
 
-import fr.lille.univ.entity.Message;
+import fr.lille.univ.core.entity.Message;
 import java.util.List;
 
 /**
@@ -41,16 +41,18 @@ interface MicroBlogDao {
      * Get the feed of user
      * @param username the username
      * @param password the password
+     * @return a list of messages.
      */
-    void getFeed(String username,String password);
+    List<Message> getFeed(String username,String password);
 
     /**
      * Get the feed of user
      * @param username the username
      * @param password the password
      * @param limit the limit of row
+     * @return a list of messages
      */
-    void getFeed(String username,String password,int limit);
+    List<Message> getFeed(String username,String password,int limit);
 
 
     /**
