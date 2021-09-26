@@ -17,7 +17,7 @@ interface MicroBlogDao {
      * @param content the content
      * @return uuid the message id
      */
-    String publish(String user,String password,String content);
+     String publish(String user,String password,String content);
 
     /**
      * Publish a post

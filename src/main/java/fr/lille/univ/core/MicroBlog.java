@@ -23,6 +23,7 @@ public class MicroBlog implements MicroBlogDao{
     private final String ip;
     private final int port;
     private final String role;
+    private String error;
 
     private MicroBlogDaoImpl microBlogDao;
 
@@ -40,6 +41,7 @@ public class MicroBlog implements MicroBlogDao{
             this.microBlogDao = new MicroBlogDaoImpl(connection);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+            this.error = e.getMessage();
         }
     }
 
